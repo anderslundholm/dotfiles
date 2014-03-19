@@ -8,12 +8,12 @@ if [ ! -d "$bkup_dir" ]; then
     mkdir -p "$bkup_dir"
 fi  
 
-for file in ./*
+for file in $dotfile_dir/*
 do
     if [ -e ~/.${file##*/} ]; then
         mv ~/.${file##*/} $bkup_dir
         printf "Moving .${file##*/} to $bkup_dir\n"
     fi 
-    ln -s ${file##*/} ~/\.${file##*/}
+    ln -s $file ~/\.${file##*/}
     printf "\nCreating symlink from ${file##*/} to ~/.${file##*/}\n"
 done 
