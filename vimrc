@@ -31,6 +31,11 @@ filetype plugin indent on     " required
 " NOTE: comments after Plugin commands are not allowed.
 " Put your stuff after this line
 
+:let mapleader = "<"
+nnoremap <leader>z :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_autoclose_preview_window_after_completion=1
+
+
 set smartindent
 set tabstop=4
 set shiftwidth=4
