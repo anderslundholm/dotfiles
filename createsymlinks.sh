@@ -15,8 +15,8 @@ do
 #check if the file is not in the no_symlink list
     if [[ $no_symlink != *${file##*/}* ]]; then
 
-#check if symlink already exist and backs it up if it does
-        if [ -h ~/.${file##*/} ]; then
+#check if dotfile or symlink already exist and backs it up if it does
+        if [ -e ~/.${file##*/} ] || [ -h ~/.${file##*/} ]; then
             mv ~/.${file##*/} $bkup_dir
             printf "\nMoving .${file##*/} to $bkup_dir\n"
         fi
