@@ -116,6 +116,9 @@ fi
 synclient ClickFinger3=2
 synclient TapButton3=2
 
+# start tmux with utf-8 encoding
+alias tmux="tmux -u"
+
 # cd alias
 alias ..="cd .."
 alias ..2="cd ../.."
