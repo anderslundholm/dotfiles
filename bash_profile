@@ -1,4 +1,3 @@
 . ~/.bashrc 
-*** BUG Watch * 
+echo "*** BUG Watch ***"
 dig +short -t txt istheinternetonfire.com 
-*** *** * * * * 
