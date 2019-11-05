@@ -128,5 +128,9 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 # After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+export HISTIGNORE="pwd:df:du:ls"
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 
 
